@@ -102,7 +102,7 @@ export default {
     },
     isOpen: {
       type: Boolean,
-      default: () => false
+      default: () => true
     },
     placeholder: {
       type: String,

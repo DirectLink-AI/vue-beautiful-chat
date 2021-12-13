@@ -14,11 +14,11 @@
       :participants="participants"
       :show-close-button="true"
       :show-launcher="true"
-      :show-emoji="true"
-      :show-file="true"
+      :show-emoji="false"
+      :show-file="false"
       :show-typing-indicator="showTypingIndicator"
-      :show-edition="true"
-      :show-deletion="true"
+      :show-edition="false"
+      :show-deletion="false"
       :title-image-url="titleImageUrl"
       :disable-user-list-toggle="false"
       @onType="handleOnType"
@@ -126,7 +126,7 @@ export default {
       titleImageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png',
       messageList: messageHistory,
       newMessagesCount: 0,
-      isChatOpen: false,
+      isChatOpen: true,
       showTypingIndicator: '',
       colors: null,
       availableColors,
