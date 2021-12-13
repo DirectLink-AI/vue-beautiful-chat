@@ -21,6 +21,7 @@
       :always-scroll-to-bottom="alwaysScrollToBottom"
       :message-styling="messageStyling"
       :show-avatar="showAvatar"
+      :on-submit="onUserInputSubmit"
       @scrollToTop="$emit('scrollToTop')"
       @remove="$emit('remove', $event)"
     >

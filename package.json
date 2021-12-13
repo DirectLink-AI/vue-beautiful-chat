@@ -23,6 +23,8 @@
     "kind-of": "6.0.3",
     "minimist": "1.2.3",
     "msgdown": "^1.0.2",
+    "primeicons": "^5.0.0",
+    "primevue": "^2.7.0",
     "v-tooltip": "^2.0.1"
   },
   "devDependencies": {

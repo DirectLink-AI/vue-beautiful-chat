@@ -56,6 +56,7 @@
       >
         <slot name="system-message-body" :message="message.data"> </slot>
       </SystemMessage>
+      <DropDown v-else-if="message.type === 'select'" :on-submit="onSubmit"> </DropDown>
     </div>
   </div>
 </template>
@@ -66,6 +67,7 @@ import FileMessage from './messages/FileMessage.vue'
 import EmojiMessage from './messages/EmojiMessage.vue'
 import TypingMessage from './messages/TypingMessage.vue'
 import SystemMessage from './messages/SystemMessage.vue'
+import DropDown from './messages/DropDown.vue'
 import chatIcon from './assets/chat-icon.svg'
 
 export default {
@@ -74,7 +76,8 @@ export default {
     FileMessage,
     EmojiMessage,
     TypingMessage,
-    SystemMessage
+    SystemMessage,
+    DropDown
   },
   props: {
     message: {
@@ -83,6 +86,10 @@ export default {
     },
     colors: {
       type: Object,
+      required: true
+    },
+    onSubmit: {
+      type: Function,
       required: true
     },
     messageStyling: {

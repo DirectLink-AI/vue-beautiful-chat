@@ -7161,6 +7161,16 @@ pretty-error@^2.0.2:
     renderkid "^2.0.1"
     utila "~0.4"
 
+primeicons@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-5.0.0.tgz#73a0b6028a77c58a9eeb331ad13aaf085e8451ee"
+  integrity sha512-heygWF0X5HFI1otlZE62pp6ye7sZ8om78J9au2BRkg8O7Y8AHTZ9qKMRzchZUHLe8zUAvdi6hZzzm9XxgwIExw==
+
+primevue@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/primevue/-/primevue-2.7.0.tgz#bf76e85251591ba917f4af6889fe2da61fc5c2b5"
+  integrity sha512-8OaTBUuLO1HCi3BghCo/1t28RFC8s0DQj1AbWentI0+kznbvTCP6nfu+bM+XWeQDV/KALkwt5aCXsrfoKuag6Q==
+
 private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.npmjs.org/private/-/private-0.1.8.tgz"

@@ -15,6 +15,11 @@ export default [
     type: 'text',
     author: 'mattmezza',
     data: {text: 'What else can I help you with today?', meta: '11:20 AM'}
+  },
+  {
+    type: 'select',
+    author: 'me',
+    data: {text: 'Pick one:', options: [], meta: '11:20 AM'}
   }
   // { type: 'text', author: `me`, id: 0, data: { text: `Why don't they have salsa on the table?` } },
   // { type: 'text', author: `mattmezza`, id: 1, data: { text: `What do you need salsa for?` } },

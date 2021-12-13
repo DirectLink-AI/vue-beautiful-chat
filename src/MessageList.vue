@@ -13,6 +13,7 @@
       :colors="colors"
       :message-styling="messageStyling"
       :should-show-avatar="shouldShowAvatar"
+      :on-submit="onSubmit"
       @remove="$emit('remove', message)"
     >
       <template v-slot:user-avatar="scopedProps">
@@ -73,6 +74,10 @@ export default {
     },
     colors: {
       type: Object,
+      required: true
+    },
+    onSubmit: {
+      type: Function,
       required: true
     },
     alwaysScrollToBottom: {
