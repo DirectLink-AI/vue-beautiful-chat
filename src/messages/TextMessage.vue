@@ -99,6 +99,7 @@ export default {
     position: relative;
     -webkit-font-smoothing: subpixel-antialiased;
     white-space: pre-wrap;
+    box-shadow: 0 2px 4px 0 #999a;
   }
   &:hover .sc-message--toolbox {
     left: -20px;
@@ -137,12 +138,22 @@ export default {
   }
 }
 
-.received .sc-message--meta {
-  text-align: left;
+.received {
+  .sc-message--text-bubble {
+    border-radius: 8px 8px 8px 0;
+  }
+  .sc-message--meta {
+    text-align: left;
+  }
 }
 
-.sent .sc-message--meta {
-  text-align: right;
+.sent {
+  .sc-message--text-bubble {
+    border-radius: 8px 8px 0 8px;
+  }
+  .sc-message--meta {
+    text-align: right;
+  }
 }
 
 .sc-message--content.sent .sc-message--text {
