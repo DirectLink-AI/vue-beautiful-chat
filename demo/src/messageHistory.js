@@ -1,9 +1,21 @@
 export default [
-  {type: 'text', author: 'mattmezza', data: {text: 'Thanks for contacting Directlink Financial.'}},
-  {type: 'text', author: 'mattmezza', data: {text: 'How may I help you today?'}},
-  {type: 'text', author: 'me', data: {text: 'What is the routing number?'}},
-  {type: 'text', author: 'mattmezza', data: {text: 'Our routing number is 123456789.'}},
-  {type: 'text', author: 'mattmezza', data: {text: 'What else can I help you with today?'}}
+  {
+    type: 'text',
+    author: 'mattmezza',
+    data: {text: 'Thanks for contacting Directlink Financial.', meta: '11:19 AM'}
+  },
+  {type: 'text', author: 'mattmezza', data: {text: 'How may I help you today?', meta: '11:20 AM'}},
+  {type: 'text', author: 'me', data: {text: 'What is the routing number?', meta: '11:20 AM'}},
+  {
+    type: 'text',
+    author: 'mattmezza',
+    data: {text: 'Our routing number is 123456789.', meta: '11:20 AM'}
+  },
+  {
+    type: 'text',
+    author: 'mattmezza',
+    data: {text: 'What else can I help you with today?', meta: '11:20 AM'}
+  }
   // { type: 'text', author: `me`, id: 0, data: { text: `Why don't they have salsa on the table?` } },
   // { type: 'text', author: `mattmezza`, id: 1, data: { text: `What do you need salsa for?` } },
   // { type: 'text', author: `me`, id: 2, data: { text: `Salsa is now the number one condiment in America.` } },

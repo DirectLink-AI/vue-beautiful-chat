@@ -1,5 +1,5 @@
 <template>
-  <div class="sc-message--text" :style="messageColors">
+  <div class="sc-message--text">
     <template>
       <div class="sc-message--toolbox" :style="{background: messageColors.backgroundColor}">
         <button v-if="showEdition && me && message.id" :disabled="isEditing" @click="edit">
@@ -12,21 +12,23 @@
             <IconCross />
           </IconBase>
         </button>
-        <slot name="text-message-toolbox" :message="message" :me="me"> </slot>
+        <slot name="text-message-toolbox" :message="message" :me="me"></slot>
       </div>
     </template>
-    <slot :message="message" :messageText="messageText" :messageColors="messageColors" :me="me">
-      <p class="sc-message--text-content" v-html="messageText"></p>
-      <p v-if="message.data.meta" class="sc-message--meta" :style="{color: messageColors.color}">
-        {{ message.data.meta }}
-      </p>
-      <p v-if="message.isEdited" class="sc-message--edited">
-        <IconBase width="10" icon-name="edited">
-          <IconEdit />
-        </IconBase>
-        edited
-      </p>
-    </slot>
+    <div class="sc-message--text-bubble" :style="messageColors">
+      <slot :message="message" :messageText="messageText" :messageColors="messageColors" :me="me">
+        <p v-html="messageText"></p>
+      </slot>
+    </div>
+    <p v-if="message.data.meta" class="sc-message--meta">
+      {{ message.data.meta }}
+    </p>
+    <p v-if="message.isEdited" class="sc-message--edited">
+      <IconBase width="10" icon-name="edited">
+        <IconEdit />
+      </IconBase>
+      edited
+    </p>
   </div>
 </template>
 
@@ -88,14 +90,14 @@ export default {
 
 <style scoped lang="scss">
 .sc-message--text {
-  padding: 5px 20px;
-  border-radius: 6px;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.4;
-  position: relative;
-  -webkit-font-smoothing: subpixel-antialiased;
-  .sc-message--text-content {
+  .sc-message--text-bubble {
+    padding: 5px 20px;
+    border-radius: 6px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    -webkit-font-smoothing: subpixel-antialiased;
     white-space: pre-wrap;
   }
   &:hover .sc-message--toolbox {
@@ -127,21 +129,29 @@ export default {
       margin-left: 5px;
     }
   }
+  .sc-message--meta {
+    color: #000;
+  }
   code {
     font-family: 'Courier New', Courier, monospace !important;
   }
 }
 
+.received .sc-message--meta {
+  text-align: left;
+}
+
+.sent .sc-message--meta {
+  text-align: right;
+}
+
 .sc-message--content.sent .sc-message--text {
   color: white;
-  background-color: #4e8cff;
   max-width: calc(100% - 120px);
   word-wrap: break-word;
 }
 
 .sc-message--content.received .sc-message--text {
-  color: #263238;
-  background-color: #f4f7f9;
   margin-right: 40px;
 }
 

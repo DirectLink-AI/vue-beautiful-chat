@@ -37,7 +37,7 @@
       </template>
       <template v-slot:text-message-body="scopedProps">
         <p class="sc-message--text-content" v-html="scopedProps.messageText"></p>
-        <p
+        <!-- <p
           v-if="scopedProps.message.data.meta"
           class="sc-message--meta"
           :style="{color: scopedProps.messageColors.color}"
@@ -50,7 +50,7 @@
         >
           <template v-if="scopedProps.message.isEdited">✎</template>
           <template v-if="scopedProps.message.liked">👍</template>
-        </p>
+        </p> -->
       </template>
       <template v-slot:system-message-body="{message}"> [System]: {{ message.text }} </template>
     </beautiful-chat>
