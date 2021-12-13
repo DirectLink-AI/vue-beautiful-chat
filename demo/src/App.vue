@@ -19,6 +19,7 @@
       :show-typing-indicator="showTypingIndicator"
       :show-edition="false"
       :show-deletion="false"
+      :show-avatar="false"
       :title-image-url="titleImageUrl"
       :disable-user-list-toggle="false"
       @onType="handleOnType"

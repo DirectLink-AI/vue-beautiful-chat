@@ -22,6 +22,7 @@
       :show-emoji="showEmoji"
       :show-file="showFile"
       :show-header="showHeader"
+      :show-avatar="showAvatar"
       :placeholder="placeholder"
       :show-typing-indicator="showTypingIndicator"
       :colors="colors"
@@ -92,6 +93,10 @@ export default {
       default: false
     },
     showEdition: {
+      type: Boolean,
+      default: false
+    },
+    showAvatar: {
       type: Boolean,
       default: false
     },

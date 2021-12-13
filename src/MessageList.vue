@@ -12,6 +12,7 @@
       :user="profile(message.author)"
       :colors="colors"
       :message-styling="messageStyling"
+      :should-show-avatar="shouldShowAvatar"
       @remove="$emit('remove', message)"
     >
       <template v-slot:user-avatar="scopedProps">
@@ -66,6 +67,10 @@ export default {
       type: String,
       required: true
     },
+    showAvatar: {
+      type: Boolean,
+      default: false
+    },
     colors: {
       type: Object,
       required: true
@@ -82,6 +87,9 @@ export default {
   computed: {
     defaultChatIcon() {
       return chatIcon
+    },
+    shouldShowAvatar() {
+      return this.showAvatar || this.participants.length > 1
     }
   },
   mounted() {

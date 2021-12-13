@@ -10,7 +10,7 @@
     >
       <slot name="user-avatar" :message="message" :user="user">
         <div
-          v-if="message.type !== 'system' && authorName && authorName !== 'me'"
+          v-if="shouldShowAvatar && message.type !== 'system' && authorName && authorName !== 'me'"
           v-tooltip="authorName"
           :title="authorName"
           class="sc-message--avatar"
@@ -88,6 +88,10 @@ export default {
     messageStyling: {
       type: Boolean,
       required: true
+    },
+    shouldShowAvatar: {
+      type: Boolean,
+      default: false
     },
     user: {
       type: Object,

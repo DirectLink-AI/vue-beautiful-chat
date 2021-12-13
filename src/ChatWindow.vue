@@ -20,6 +20,7 @@
       :colors="colors"
       :always-scroll-to-bottom="alwaysScrollToBottom"
       :message-styling="messageStyling"
+      :show-avatar="showAvatar"
       @scrollToTop="$emit('scrollToTop')"
       @remove="$emit('remove', $event)"
     >
@@ -83,6 +84,10 @@ export default {
     showHeader: {
       type: Boolean,
       default: true
+    },
+    showAvatar: {
+      type: Boolean,
+      default: false
     },
     participants: {
       type: Array,
